@@ -1,6 +1,6 @@
 import React from "react"
-export const Movies = () => {
+export const Home = () => {
     return <div>
-        'This is Movies'
+        'This is homepage'
     </div>
 }
