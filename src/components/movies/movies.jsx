@@ -1,6 +1,7 @@
-import React from "react"
+import React from "react";
+import { Header } from "components/Header/Header";
 export const Movies = () => {
-    return <div>
+    return <><Header/><div>
         'This is Movies'
-    </div>
+    </div></>
 }
