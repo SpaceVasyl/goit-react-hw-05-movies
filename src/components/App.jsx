@@ -1,7 +1,7 @@
 // import { Component } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./Home/Home";
-import { Trending } from "./trending/trending";
+import { Trending } from "./Trending/Trending";
 import { Movies } from "./movies/movies";
 import { Credits } from "./credits/credits";
 import { Details } from "./details/details";
