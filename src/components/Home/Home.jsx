@@ -1,11 +1,8 @@
 import React from "react";
-import { Header } from "components/Header/Header";
-import { Trending } from "components/Trending/Trending";
+import { Trending } from "../Trending/Trending";
 export const Home = () => {
-    return <><Header/>
-    <div>
-        'This is homepage'
-        <Trending/>
-    </div>
+    return <>
+    <div>Homepage</div>
+    <Trending/>
     </>
 }
