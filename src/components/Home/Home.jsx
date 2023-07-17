@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import { NavLink } from "react-router-dom";
 
 export const Home = () => {
   const [data, setData] = useState(null);
@@ -22,10 +23,7 @@ export const Home = () => {
         vote_average: movie.vote_average,
         vote_count: movie.vote_count
       }));
-      const movieTitles = parsedMovies.map(parsedMovie => ({
-        title:parsedMovie.title
-      }))
-      setData(movieTitles);
+      setData(parsedMovies);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -35,10 +33,9 @@ export const Home = () => {
     <div>{console.log(data)}
       <h1>Home Page</h1>
       {data ? (
-        <div>
-          <h2>Data from API:</h2>
-          <pre>{JSON.stringify(data, null, 2)}</pre>
-        </div>
+        data.map(item => (
+          <NavLink key={item.id}>{item.title}</NavLink>
+        ))
       ) : (
         <p>Loading...</p>
       )}
